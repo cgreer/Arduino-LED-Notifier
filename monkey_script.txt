@@ -1,0 +1,24 @@
+// ==UserScript==
+// @name       JasonGmail
+// @namespace  JasonGmail
+// @version    0.1
+// @description  Check for new hits automatically
+// @include    https://mail*
+// @copyright  2012, Chris Greer
+// @require  http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+// ==/UserScript==
+
+function check_all_titles(){
+    
+    console.log("TITLE", document.title);
+    $.post("http://localhost:8079/cgi-bin/index.py", {tText: JSON.stringify(document.title)});
+    
+}
+
+$(document).ready(function(){
+  
+    
+    // refresh every 15 seconds (play nice! Don't spam reddit please!) 
+    setInterval(function(){check_all_titles()}, 1 * 1000); //seconds til refresh
+    
+});#log.write(tTitles)
