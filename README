@@ -1,5 +1,4 @@
-
-1) install tampermonkey script
-2) start qServer
+1) Install tampermonkey script
+2) Start qServer
     ./qServer.py
-3) output will be in ./gmail_text.txt
+3) Output will be in ./gmail_text.txt
